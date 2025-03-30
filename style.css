@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Page-1 Background */
+.page-1 {
+    background-image: url('background.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Allow positioning of children */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent; /* Fully transparent background */
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h2 {
+    font-size: 2rem;
+    color: rgb(47, 46, 46);
+}
+
+.logo h2:hover{
+    color: rgb(3, 30, 48);
+    transition: color 0.3s ease-in-out 0.2s;
+}
+
+.logo h2::first-letter {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.logo img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.13); /* Smooth scale animation */
+}
+
+/* Navbar Links Styling */
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Reduced gap */
+    list-style-type: none;
+    margin-left: 30%; /* Changed from 40rem to auto */
+    /*margin-right: auto;  Centers the links */
+    padding: 0 1rem; /* Added padding */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(2, 30, 47);
+}
+
+/* Social Media Icons */
+.nav-social {
+    display: flex;
+    gap: 1rem;
+    /* Removed margin-left: 2.5rem */
+}
+
+.nav-social a {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.nav-social a:hover {
+    transform: scale(1.2); /* Smooth scale animation */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Content Positioning */
+.content-1 {
+    width: auto;
+    position: absolute;
+    top: 20%;
+    left: 10rem;
+}
+
+/* Styling the heading */
+.content-1 h1 {
+    font-size: 4rem;
+    color: rgb(44, 43, 43)
+}
+
+/* Styling alternating letters */
+.content-1 h1::first-letter {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+/* Styling every even letter */
+.content-1 h1 span:nth-of-type(2n) {
+    color: rgb(9, 60, 92);
+    font-size: 4.2rem;
+    font-style: italic;
+}
+
+.mac {
+    position: relative;
+    left: 150%;
+    padding: 1.5rem;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+}
+
+.mac-content {
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mac-2{
+    position: relative;
+    top: 10%;
+    padding: 1.5rem;
+    background-color: #191818;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+}
+.mac-2-content{
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.6rem;
+}
+.colors{
+    display: flex;
+    gap: 0.5rem;
+}
+#red{
+    background-color: rgb(223, 80, 80);
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+}
+#yellow{
+    background-color: rgb(255, 255, 0);
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+}
+#green{
+    background-color: rgb(52, 234, 52);
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+}
+/* ========== MEDIA QUERIES ========== */
+
+/* For large desktops */
+@media (min-width: 1054px) and (max-width: 1200px){
+    .nav-links {
+        gap: 2rem;
+        margin-left: 18%;
+    }
+}
+@media (max-width: 1260px){
+    .mac{
+        left: 0%;
+        margin: 10% 0;
+    }
+}
+@media (max-width: 1060px){
+    .nav-links {
+        gap: 1.5rem;
+        margin-left: 5%;
+    }
+}
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+    
+    .content-1 {
+        left: 5rem;
+    }
+    
+    .content-1 h1 {
+        font-size: 3.5rem;
+    }
+    
+    .content-1 h1::first-letter {
+        font-size: 4.5rem;
+    }
+    
+    .content-1 h1 span:nth-of-type(2n) {
+        font-size: 3.7rem;
+    }
+    
+    .mac {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}
+
+/* For tablets */
+@media (max-width: 890px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        margin: 0;
+        gap: 1rem;
+    }
+    
+    .nav-social {
+        display: none;
+        position: absolute;
+        top: calc(100% + 200px);
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .content-1 {
+        left: 2rem;
+        top: 15%;
+    }
+    
+    .content-1 h1 {
+        font-size: 3rem;
+    }
+    
+    .content-1 h1::first-letter {
+        font-size: 4rem;
+    }
+    
+    .content-1 h1 span:nth-of-type(2n) {
+        font-size: 3.2rem;
+    }
+    
+    .mac-2 {
+        top: 30%;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
