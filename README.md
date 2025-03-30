@@ -1,2 +1,2 @@
-# Responsive-Protfolio-Website
+# Responsive-Portfolio-Website
 Making my website responsive
